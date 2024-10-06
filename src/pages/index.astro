@@ -1,16 +1,22 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import BlogList from "../components/BlogList.astro";
+import Quote from "../components/Quote.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="NewBlueSoap : New Perspectives On Philosophy">
+  <div class="text-center">
+    <h1 class="">New Perspectives On Philosophy</h1>
+  </div>
+  <Quote
+    author="John Lennon"
+    source="http://www.beatlesinterviews.org/db69.html"
+    sourceName="BeatlesInterviews.org"
+  >
+    "People say we're naive for trying to sell peace like a bar of soap. But is
+    the soap company naive? They're selling the same old soap that's been around
+    for two thousand years, but now it's 'New Blue Soap'. Well, we're selling
+    'New Blue Peace!'... and we hope some of you buy it!"
+  </Quote>
+  <BlogList postsPerPage={3} />
+</Layout>

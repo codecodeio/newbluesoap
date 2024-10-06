@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  link: string;
+  tags: string | null;
+}
+
+const { title, body, link, tags } = Astro.props;
+---
+
+<a href={link} class="block group">
+  <div class="bg-gray-900 shadow-md rounded-lg p-6">
+    <h2 class="text-xl font-semibold mb-4 text-white">
+      <span class="font-bold group-hover:text-gray-400"
+        >{title}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="4"
+          stroke="currentColor"
+          class="w-4 h-4 inline-block ml-2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </span>
+    </h2>
+    <p class="mb-6">{body}</p>
+    {tags && <span class="text-sm">{tags}</span>}
+  </div>
+</a>

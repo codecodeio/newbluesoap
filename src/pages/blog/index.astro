@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Quote from "../../components/Quote.astro";
+import BlogList from "../../components/BlogList.astro";
+---
+
+<Layout title="NewBlueSoap : Blog Posts">
+  <Quote author="Epictetus">
+    If you want to improve, be content to be thought foolish and stupid.
+  </Quote>
+
+  <BlogList postsPerPage={5} />
+</Layout>

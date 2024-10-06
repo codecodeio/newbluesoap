@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+type Props = CollectionEntry<"blog">["data"];
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<div class="max-w-4xl mx-auto w-4/5 text-left">
+  <div class="text-center">
+    <div class="date text-right">
+      <FormattedDate date={pubDate} />
+      {
+        updatedDate && (
+          <div class="text-sm">
+            Updated <FormattedDate date={updatedDate} />
+          </div>
+        )
+      }
+    </div>
+    <h1>{title}</h1>
+  </div>
+  <div class="leading-loose"><slot /></div>
+</div>

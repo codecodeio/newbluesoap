@@ -1,0 +1,72 @@
+---
+
+---
+
+<nav class="fixed top-0 w-full bg-black shadow-lg z-50">
+  <div class="container mx-auto">
+    <div class="flex justify-between items-center">
+      <a
+        class="rainbow font-bold text-xl"
+        href="/"
+        class="text-lg font-semibold hover:text-gray-400"
+      >
+        <span class="inline-flex items-center">
+          <svg
+            class="w-10 h-10 mr-2 mt-2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <!-- Bar of soap with wider dimensions -->
+            <rect
+              x="5"
+              y="12"
+              width="54"
+              height="32"
+              rx="8"
+              ry="8"
+              fill="url(#gradient)"></rect>
+
+            <!-- First squiggly line moved to the right -->
+            <path
+              d="M12 20 Q 17 16, 22 20 T 32 20 T 42 20 T 52 20"
+              stroke="white"
+              fill="none"
+              stroke-width="2"></path>
+
+            <!-- Second squiggly line moved to the right -->
+            <path
+              d="M12 26 Q 17 22, 22 26 T 32 26 T 42 26 T 52 26"
+              stroke="white"
+              fill="none"
+              stroke-width="2"></path>
+
+            <!-- Third squiggly line moved to the right -->
+            <path
+              d="M12 32 Q 17 28, 22 32 T 32 32 T 42 32 T 52 32"
+              stroke="white"
+              fill="none"
+              stroke-width="2"></path>
+
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#06b6d4"></stop>
+                <stop offset="100%" stop-color="#67e8f9"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="text-2xl font-semibold">NewBlueSoap</span>
+        </span>
+      </a>
+      <ul class="flex space-x-4 list-none text-md font-normal">
+        <li><a href="/blog" class="hover:text-gray-400">blog</a></li>
+        <li>|</li>
+        <li><a href="/about" class="hover:text-gray-400">about</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
